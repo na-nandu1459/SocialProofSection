@@ -5,6 +5,16 @@ async function getFromServer(){
                   function createCard(anime, quote){
                       let card = document.createElement('div')
                       card.className = "mainClass";
+                      let wholeCard = document.createElement('div');
+                      wholeCard.className="wholeCard"
+                      let cardimg = document.createElement('div');
+                      cardimg.className="wholeCardImg";
+                      let titletag = document.createElement('div');
+                      titletag.className="wholeCardtag";
+                      let tagname = document.createElement('p');
+                      tagname.className="tag";
+                      tagname.innerText="Verified Buyer";
+
                       let  imageElemet = document.createElement('img')
                       imageElemet.className = "image";
                     imageElemet.src = "images/image-anne.jpg";
@@ -12,9 +22,13 @@ async function getFromServer(){
                       title.innerText = anime;
                       let content = document.createElement('p')
                       content.innerText = quote
-        
-                        card.appendChild(imageElemet)
-                        card.appendChild(title)
+
+                        card.appendChild(wholeCard)
+                        wholeCard.appendChild(cardimg)
+                        wholeCard.appendChild(titletag)
+                        cardimg.appendChild(imageElemet)
+                        titletag.appendChild(title)
+                        titletag.appendChild(tagname)
                         card.appendChild(content)
                         
                     return card;
@@ -36,16 +50,5 @@ async function getFromServer(){
      col2.innerText = "We only provide great products combined with excellent customer service See what our satisfied customers are saying about our services.";
      console.log(col2);
 
-    // let btn = document.getElementById('btn1')
-    // col1.innerText = " Rated 5 Stars in Reviews";
-    // console.log(btn);
-
-    // let btn1 = document.getElementById('btn2');
-    // col1.innerText = " Rated 5 Stars in Report Guru";
-    // console.log(btn1);
-
-    // let btn2 = document.getElementById('btn3')
-    // col1.innerText = " Rated 5 Stars in BestTech";
-    // console.log(btn2);
 
     
