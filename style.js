@@ -19,6 +19,7 @@ async function getFromServer(){
                       imageElemet.className = "image";
                     imageElemet.src = "images/image-anne.jpg";
                       let title = document.createElement('h2')
+                      title.className = "cardheading";
                       title.innerText = anime;
                       let content = document.createElement('p')
                       content.innerText = quote

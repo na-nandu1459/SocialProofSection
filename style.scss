@@ -7,11 +7,6 @@ $Light-grayish-magenta: hsl(300, 24%, 96%);
 $white: hsl(0, 0%, 100%);
 $font-size: 15px;
 
-*padding{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
 body{
     font-size: $font-size;
     font-family:'Spartan', sans-serif ;
@@ -63,10 +58,10 @@ body{
   font-weight: bold;
 }
 .rating2{
-    margin-left: 50px;
+   transform: translateX(15%);
 }
 .rating3{
-   margin-left: 100px; 
+    transform: translateX(30%);
 }
 .stars{
     margin-right: 40px;
@@ -87,53 +82,56 @@ body{
 background-color: $very-dark-magenta;
 color: $white;
 font-size: 14px;
-width: 375px;
+width: calc(33.33% - 85px);
 border-radius: 10px;
 line-height: 24px;
 padding: 40px 30px;
 margin-top: 50px;
-height: 200px;
+margin-right: 20px;
 }
 .wholeCard{
  display: flex;
  align-items: center;
  margin-bottom: 30px;
+ .cardheading{
+     white-space: nowrap;
+     overflow: hidden;
+     text-overflow: ellipsis;
+     max-width: 89%;
+     font-size: 16px;
+ }
  .tag{
      color: $soft-pink;
  }
 }
 .wholeCard img{
-    width: 74px;
-    height: 74px;
+    width: 60px;
+    height: 60px;
     border-radius: 50%;
     margin-right: 20px;
 }
 .wholeCardtag{
-    line-height: 20px;
+    line-height: 19px;
 }
 .mainClass p{
     overflow: hidden;
     text-overflow: ellipsis;
     display: -webkit-box;
-    -webkit-line-clamp: 3;/*lines to be displayed*/
+    -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
     font-size: $font-size;
 }
 
-.mainClass:nth-child(2),
-.mainClass:nth-child(5),
-.mainClass:nth-child(8)
+.mainClass:nth-child(3n-1)
 {
     transform: translateY(30px);
 }
-.mainClass:nth-child(3),
-.mainClass:nth-child(6),
-.mainClass:nth-child(9){
+.mainClass:nth-child(3n){
     transform: translateY(60px);
 }
 
 @media (max-width:600px){
-    /header-left/
+    /*header-left*/
     #content{
     flex-direction:column ;
     padding: 0px;
@@ -167,10 +165,10 @@ height: 200px;
 
 }
 .rating2{
-    margin-left:0px;
+   transform: translateX(0%);
 }
 .rating3{
-   margin-left: 0px; 
+    transform: translateX(0%);
 }
 .stars{
     margin-right: 0px;
@@ -182,18 +180,15 @@ height: 200px;
 #main{
     padding: 0px 0px;
 }
-.wholeCardtag h2{
-    font-size: 18px;
+.cardheading{
+    white-space: none;
+    max-width: 100%;
 }
-.mainClass:nth-child(2),
-.mainClass:nth-child(5),
-.mainClass:nth-child(8)
+.mainClass:nth-child(3n-1)
 {
     transform: translateY(0px);
 }
-.mainClass:nth-child(3),
-.mainClass:nth-child(6),
-.mainClass:nth-child(9){
+.mainClass:nth-child(3n){
     transform: translateY(0px);
 }
 .mainClass p{
@@ -201,7 +196,7 @@ height: 200px;
 }
 }
 
-@media (max-width:800px) {
+@media (max-width:768px) {
     #content{
         flex-direction:column;
 
@@ -236,11 +231,11 @@ height: 200px;
 
 }
 .rating2{
-    margin-left:0px;
-}
-.rating3{
-   margin-left: 0px; 
-}
+    transform: translateX(0%);
+ }
+ .rating3{
+     transform: translateX(0%);
+ }
 .stars{
     margin-right: 0px;
 }
@@ -251,23 +246,22 @@ height: 200px;
 #main{
     padding: 0px 0px;
 }
-.wholeCardtag h2{
-    font-size: 18px;
-}
+    .cardheading{
+        white-space: none;
+        max-width: 100%;
+        font-size: 12px;
+    }
+
 .mainClass{
-    width: 254px;
+    width: 100%;
     margin-left: 25px;
     margin-right: 25px;
 }
-.mainClass:nth-child(2),
-.mainClass:nth-child(5),
-.mainClass:nth-child(8)
+.mainClass:nth-child(3n-1)
 {
     transform: translateY(0px);
 }
-.mainClass:nth-child(3),
-.mainClass:nth-child(6),
-.mainClass:nth-child(9){
+.mainClass:nth-child(3n){
     transform: translateY(0px);
 }
 }
@@ -300,18 +294,18 @@ height: 200px;
     } 
 
 .rating{
-    width: 92%;
+    width: 73%;
   display: flex;
   flex-direction: column;
   text-align: center;
 
 }
 .rating2{
-    margin-left:0px;
-}
-.rating3{
-   margin-left: 0px; 
-}
+    transform: translateX(0%);
+ }
+ .rating3{
+     transform: translateX(0%);
+ }
 .stars{
     margin-right: 0px;
 }
@@ -322,23 +316,20 @@ height: 200px;
 #main{
     padding: 0px 0px;
 }
-.wholeCardtag h2{
-    font-size: 18px;
-}
+    .cardheading{
+        white-space: none;
+        max-width: 100%;
+    }
 .mainClass{
-    width: 390px;
+    width: 100%;
     margin-left: 25px;
     margin-right: 25px;
 }
-.mainClass:nth-child(2),
-.mainClass:nth-child(5),
-.mainClass:nth-child(8)
+.mainClass:nth-child(3n-1)
 {
     transform: translateY(0px);
 }
-.mainClass:nth-child(3),
-.mainClass:nth-child(6),
-.mainClass:nth-child(9){
+.mainClass:nth-child(3n){
     transform: translateY(0px);
-}   
+}  
 }
