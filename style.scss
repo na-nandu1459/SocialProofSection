@@ -110,15 +110,16 @@ body {
   margin-bottom: 30px;
 }
 
-.wholeCard .cardheading {
+.wholeCard.cardheading {
  // white-space: nowrap;
   overflow: hidden;
-//   text-overflow: ellipsis;
+  text-overflow: ellipsis;
  // max-width: 89%;
   font-size: 17px;
+
 }
 
-.wholeCard .tag {
+.wholeCard.tag {
   color: #ee68a4;
 }
 
@@ -132,6 +133,14 @@ body {
 .wholeCardtag {
   line-height: 19px;
 }
+// .wholeCardtag.cardheading{
+//     margin-top: 0px;
+//     margin-bottom: 0px;
+// }
+// .wholeCardtag.tag{
+//     margin-top: 0px;
+//     margin-bottom: 0px;
+// }
 
 .mainClass p {
   overflow: hidden;
@@ -224,6 +233,7 @@ body {
   .mainClass p {
     font-size: 13px;
   }
+  
 }
 
 @media (max-width: 768px) {

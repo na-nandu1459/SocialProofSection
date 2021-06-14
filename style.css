@@ -110,12 +110,13 @@ body {
   margin-bottom: 30px;
 }
 
-.wholeCard .cardheading {
+.wholeCard.cardheading {
   overflow: hidden;
+  text-overflow: ellipsis;
   font-size: 17px;
 }
 
-.wholeCard .tag {
+.wholeCard.tag {
   color: #ee68a4;
 }
 
